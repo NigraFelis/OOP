@@ -91,13 +91,17 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public void updatePass(MemberBean member) {
 		
-		for(int i=0;i<list.length;i++){
+		/*for(int i=0;i<list.length;i++){
 			if(member.getId().equals(list[i].getId())){
 				list[i].setPassword(member.getPassword());;
 			}
-		}
-		
-		
+		}*/
+		/*for(int i=0;i<list.length;i++){
+			if(findById(member.getId()).equals(list[i].getId())){
+				list[i].setPassword(member.getPassword());;
+			}
+		}*/
+		(findById(member.getId())).setPassword(member.getPassword());;
 		
 	}
 }
